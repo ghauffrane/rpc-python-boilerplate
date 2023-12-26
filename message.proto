@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+message StatusRequest {
+    // Define any fields needed for status check, if required
+}
+
+message StatusResponse {
+    string status = 1;
+}
+
+message EventRequest {
+    // Define any fields needed for event triggering, if required
+}
+
+message EventResponse {
+    string response = 1;
+}
+
+service YourService {
+    rpc CheckStatus (StatusRequest) returns (StatusResponse) {}
+    rpc TriggerEvent (EventRequest) returns (EventResponse) {}
+}
